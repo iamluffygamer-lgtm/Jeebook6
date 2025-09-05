@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEE Chapter-wise Quiz</title>
+  <link rel="stylesheet" href="quiz-style.css">
+</head>
+<body>
+      <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">IIT GROUPS</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="tools.html">Tools</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>📘 JEE Chapter-wise Quiz By IIT GROUPS</h1>
+
+    <!-- Step 1: Enter Name -->
+    <div id="name-section">
+      <label for="nickname">Enter Your Name:</label>
+      <input type="text" id="nickname" placeholder="Your Name">
+      <button id="save-name">Start</button>
+    </div>
+
+   <!-- Step 2: Select Subject & Chapter -->
+<div id="selection-section" class="hidden">
+  <label for="subject">Choose Subject:</label>
+  <select id="subject">
+    <option value="physics">Physics</option>
+  </select>
+  <label for="chapter">Choose Chapter:</label>
+  <select id="chapter"></select>
+  <button id="start-quiz">Start Quiz</button>
+</div>
+
+    <!-- Step 3: Quiz Area -->
+    <div id="quiz-section" class="hidden">
+      <div id="score-timer">
+        <span id="score">Score: 0</span>
+        <span id="timer">Time: 0s</span>
+      </div>
+      <div id="question-container"></div>
+      <button id="next-btn" class="hidden">Next</button>
+    </div>
+
+<!-- Step 4: Result + Leaderboard -->
+<div id="result-section" class="hidden">
+  <h2>Quiz Finished ✅</h2>
+  <p id="final-score"></p>
+  <h3>Leaderboard</h3>
+  <ul id="leaderboard"></ul>
+  <button onclick="location.reload()">Restart</button>
+</div>
+
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="quiz-script.js"></script>
+</html>

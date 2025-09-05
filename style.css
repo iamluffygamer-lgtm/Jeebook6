@@ -1,0 +1,191 @@
+/* General styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: #2d3e50;
+  color: #fff;
+  padding: 16px 0;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  margin-bottom: 32px;
+}
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 32px;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+.navbar nav {
+  display: inline-block;
+  float: right;
+  margin-right: 32px;
+}
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar nav a:hover {
+  color: #ffd700;
+}
+
+/* Main container */
+.container {
+  max-width: 700px;
+  margin: 32px auto;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.12);
+}
+
+/* Headings */
+h1, h2, h3 {
+  text-align: center;
+  color: #2d3e50;
+  margin-bottom: 16px;
+}
+
+/* Form elements */
+label {
+  font-weight: 500;
+  margin-top: 12px;
+  display: block;
+}
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #bfc9d4;
+  border-radius: 6px;
+  font-size: 1em;
+  background: #f4f6f9;
+  transition: border 0.2s;
+}
+input[type="text"]:focus, select:focus {
+  border-color: #2d3e50;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #4f8cff 0%, #38c8ff 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+button:hover {
+  background: linear-gradient(90deg, #38c8ff 0%, #4f8cff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Quiz area */
+#score-timer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 1.1em;
+  color: #4f8cff;
+}
+
+#question-container {
+  margin: 24px 0;
+  font-size: 1.15em;
+}
+
+/* Option buttons */
+.option-btn, .option {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #bfc9d4;
+  background: #f4f6f9;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1em;
+  transition: background 0.2s, border 0.2s;
+  color: #222; /* <-- Add this line for dark text */
+}
+.option-btn:hover, .option:hover {
+  background: #e0eafc;
+  border-color: #4f8cff;
+}
+.option-btn.correct, .option.correct {
+  background: #c8f7c5;
+  border-color: #27ae60;
+}
+.option-btn.wrong, .option.wrong {
+  background: #f7c5c5;
+  border-color: #e74c3c;
+}
+
+/* Result section */
+#result-section {
+  text-align: center;
+}
+#final-score {
+  font-size: 1.3em;
+  color: #27ae60;
+  margin-bottom: 18px;
+}
+
+/* Leaderboard */
+#leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background: #f4f6f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+#leaderboard th, #leaderboard td {
+  border: 1px solid #bfc9d4;
+  padding: 10px;
+  text-align: center;
+}
+#leaderboard th {
+  background: #e0eafc;
+  color: #2d3e50;
+  font-weight: 600;
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 16px 6px;
+    border-radius: 8px;
+  }
+  .navbar .logo, .navbar nav {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #leaderboard th, #leaderboard td {
+    padding: 6px;
+    font-size: 0.95em;
+  }
+}
